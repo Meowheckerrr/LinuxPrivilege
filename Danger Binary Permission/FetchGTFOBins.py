@@ -1,5 +1,5 @@
 
-# Fetch SUID Binaries from GTFO Bins
+# Fetch Danger Binaries Name from GTFO Bins
 
 #Customization
 # -> URL
@@ -7,11 +7,11 @@
 
 import requests
 from bs4 import BeautifulSoup
-
+from urllib.parse import quote
 
 url = "https://gtfobins.github.io/#+suid"
-
-response = requests.get(url)
+encoded_url = quote(url, safe=":/#") # Avoid Ingore #+suid !
+response = requests.get(encoded_url)
 
 if response.status_code == 200:
     soup = BeautifulSoup(response.text, "html.parser")
