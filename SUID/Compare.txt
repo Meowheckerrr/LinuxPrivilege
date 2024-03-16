@@ -1,0 +1,7 @@
+Usage
+python3 Compare.py -f b.txt -w a.txt
+
+Output
+file compare with Wordlist
+Found !  123 == 123
+Found !  hecker == hecker
